@@ -6,8 +6,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Login | Magic UI",
-  description: "Login to your account",
+  title: "Login | FundBridge",
+  description: "Login to your FundBridge account",
 };
 
 export default function LoginPage() {
@@ -33,7 +33,7 @@ export default function LoginPage() {
           </h1>
           <p className="text-sm text-muted-foreground">Login to your account</p>
         </div>
-        <UserAuthForm />
+        <UserAuthForm mode="signin" />
         <p className="px-8 text-center text-sm text-muted-foreground">
           <Link
             href="/signup"
