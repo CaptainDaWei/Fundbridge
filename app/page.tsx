@@ -5,6 +5,7 @@ import HeroSection from "@/components/landing/hero-section";
 import ImageShowcase from "@/components/landing/image-showcase";
 import PricingSection from "@/components/landing/pricing-section";
 import TestimonialsSection from "@/components/landing/testimonials-section";
+import ValuePropsSection from "@/components/landing/value-props-section";
 import Particles from "@/components/magicui/particles";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -27,6 +28,7 @@ export default async function Home() {
       <TestimonialsSection />
       <PricingSection />
       <FeatureCards />
+      <ValuePropsSection />
       <CallToActionSection />
       <SiteFooter />
     </div>
