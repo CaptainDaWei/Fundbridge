@@ -18,8 +18,9 @@ export function DockNavigation() {
   const pathname = usePathname();
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
-  // Hide the dock on landing page (root path)
-  if (pathname === '/') {
+  // Hide the dock on landing page (root path) and auth pages
+  const hideDockPaths = ['/', '/signin', '/signup', '/login', '/register'];
+  if (hideDockPaths.includes(pathname)) {
     return null;
   }
 
