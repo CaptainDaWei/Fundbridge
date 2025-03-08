@@ -9,6 +9,7 @@ import ValuePropsSection from "@/components/landing/value-props-section";
 import Particles from "@/components/magicui/particles";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import styles from './landing-page.module.css';
 
 export default async function Home() {
   return (
