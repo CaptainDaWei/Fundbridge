@@ -1,3 +1,5 @@
+"use client";
+
 import CallToActionSection from "@/components/landing/cta-section";
 import CircularUspSection from "@/components/landing/circular-usp-section";
 import FeatureCards from "@/components/landing/feature-cards";
@@ -7,7 +9,7 @@ import PricingSection from "@/components/landing/pricing-section";
 import TestimonialsSection from "@/components/landing/testimonials-section";
 import Particles from "@/components/magicui/particles";
 
-export default async function Page() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-black text-white relative">
       <Particles
