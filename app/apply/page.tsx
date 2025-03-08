@@ -76,6 +76,15 @@ export default function ApplicationBuilderPage() {
           </div>
         </div>
       </div>
+      
+      <div className="text-center py-8">
+        <p className="text-sm text-yellow-600 dark:text-yellow-400 font-medium mb-2">
+          Available with Fundbridge Voyager
+        </p>
+        <a href="/dashboard#pricing" className="text-primary hover:underline">
+          Upgrade to Pro to unlock advanced application features
+        </a>
+      </div>
     </div>
   );
 } 

@@ -1,5 +1,9 @@
 import { Metadata } from "next";
-import ApplicationLayout from "@/components/application/layout";
+import { ReactNode } from "react";
+
+interface ApplicationLayoutProps {
+  children: ReactNode;
+}
 
 export const metadata: Metadata = {
   title: {
@@ -9,10 +13,6 @@ export const metadata: Metadata = {
   description: "Your nonprofit fundraising management application",
 };
 
-export default function ApplicationRootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return <ApplicationLayout>{children}</ApplicationLayout>;
+export default function ApplicationLayout({ children }: ApplicationLayoutProps) {
+  return <div className="application-layout">{children}</div>;
 } 
