@@ -191,18 +191,18 @@ export default function CallToActionSection() {
   return (
     <section id="cta" className="mx-auto max-w-[80rem] px-6 md:px-8">
       <div
-        className="max-w-[80rem] w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20"
+        className="max-w-[80rem] w-full mx-auto grid grid-cols-1 gap-8"
         ref={containerRef}
       >
         <motion.div
           className="flex flex-col justify-center"
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          initial="visible"
+          animate="visible"
           variants={{
             visible: { opacity: 1, y: 0 },
             hidden: { opacity: 0, y: 100 },
           }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ duration: 0.5 }}
         >
           <h5 className="text-base text-slate-600 dark:text-slate-400 mb-4">
             Begin Your Impact Journey
@@ -252,30 +252,8 @@ export default function CallToActionSection() {
         </motion.div>
       </div>
 
-      {/* Success Stories Section - Now Centered */}
-      <div className="w-full flex justify-center items-center py-24 border-t border-gray-800/20 mt-10">
-        <motion.div
-          className="max-w-3xl text-center px-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-rose-500">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
-              Success Stories from Our Community
-            </h2>
-            <div className="mx-auto max-w-2xl">
-              <p className="text-base md:text-lg text-white">
-                Join the nonprofit organizations who've transformed their fundraising with our platform. Our solutions are designed to grow with you.
-              </p>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-
       {/* Enhanced Value Propositions Section */}
-      <div className="py-24">
+      <div className="py-12">
         <div className="mb-14 text-center">
           <h2 className="text-3xl font-bold tracking-tight mb-4 text-slate-900 dark:text-slate-100">
             Why Nonprofits Choose <span className="text-[var(--color-one)]">Fundbridge</span>

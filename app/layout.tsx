@@ -1,5 +1,6 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
+import { DockNavigation } from "@/components/dock-navigation";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
@@ -9,9 +10,10 @@ const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
+
 export const metadata: Metadata = {
-  title: "Magic UI",
-  description: "The startup template from Magic UI",
+  title: "FundBridge",
+  description: "Nonprofit fundraising platform connecting funders and applicants",
 };
 
 export default function RootLayout({
@@ -23,7 +25,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background font-sans antialiased pb-24",
           fontSans.variable
         )}
       >
@@ -33,6 +35,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <DockNavigation />
           <Toaster />
         </ThemeProvider>
       </body>
