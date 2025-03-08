@@ -22,7 +22,7 @@ import {
 import { cn } from "@/lib/utils";
 import {
   CalendarPlus,
-  CalendarSync,
+  Calendar,
   CircleAlert,
   CircleCheck,
   CircleDashed,
@@ -183,7 +183,7 @@ const FilterIcon = ({
     case FilterType.CREATED_DATE:
       return <CalendarPlus className="size-3.5" />;
     case FilterType.UPDATED_DATE:
-      return <CalendarSync className="size-3.5" />;
+      return <Calendar className="size-3.5" />;
     case Status.BACKLOG:
       return <CircleDashed className="size-3.5 text-muted-foreground" />;
     case Status.TODO:
