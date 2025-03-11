@@ -3,9 +3,15 @@ import type { NextRequest } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 
 // Define paths that don't require authentication
-const publicPaths = ['/', '/signin', '/signup', '/auth/callback', '/about', '/contact', '/privacy', '/terms']
+// Temporarily making all paths public by using a wildcard
+const publicPaths = ['/*']  // This will match all routes
 
 export async function middleware(req: NextRequest) {
+  // Simply return the next response to allow all access
+  return NextResponse.next()
+  
+  // The code below is commented out to temporarily disable authentication checks
+  /*
   const res = NextResponse.next()
   
   // Create a Supabase client
@@ -53,6 +59,7 @@ export async function middleware(req: NextRequest) {
   }
   
   return res
+  */
 }
 
 // Specify which paths this middleware should run on
